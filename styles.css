@@ -1,0 +1,109 @@
+.fmc-modal {
+	max-width: 480px;
+}
+
+.fmc-filename {
+	color: var(--text-muted);
+	font-size: 0.85em;
+	margin-top: -8px;
+	margin-bottom: 16px;
+	word-break: break-all;
+}
+
+.fmc-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-height: 55vh;
+	overflow-y: auto;
+	margin-bottom: 16px;
+}
+
+.fmc-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	min-height: 44px; /* comfortable tap target on iPhone */
+	border-radius: 8px;
+	cursor: pointer;
+	background: var(--background-secondary);
+	transition: background-color 0.1s ease;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+}
+
+.fmc-row:hover {
+	background: var(--background-modifier-hover);
+}
+
+.fmc-row:active {
+	background: var(--background-modifier-active-hover);
+}
+
+.fmc-row.is-selected {
+	background: var(--background-modifier-error-hover);
+	border: 1px solid var(--text-error);
+}
+
+.fmc-checkbox {
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	/* The row click handler owns the toggle so the whole row (not just the
+	   checkbox hitbox) is clickable; this avoids a double-toggle on tap. */
+	pointer-events: none;
+}
+
+.fmc-text {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+	gap: 2px;
+}
+
+.fmc-key {
+	font-weight: 600;
+	font-size: 0.95em;
+	color: var(--text-normal);
+	word-break: break-word;
+}
+
+.fmc-value {
+	font-size: 0.82em;
+	color: var(--text-muted);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fmc-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	border-top: 1px solid var(--background-modifier-border);
+	padding-top: 12px;
+}
+
+.fmc-footer button {
+	min-height: 40px;
+	padding: 8px 16px;
+	font-size: 0.95em;
+}
+
+.fmc-delete:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+	.fmc-row {
+		padding: 12px;
+	}
+
+	.fmc-footer button {
+		flex: 1;
+	}
+}

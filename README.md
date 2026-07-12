@@ -1,7 +1,9 @@
+# Frontmatter Cleaner
+
 Quickly review and remove frontmatter (YAML) properties from the note you're
 currently viewing — without opening the YAML block and editing them one by one with right clicks.
 
-## Why this plugin
+## Why
 
 Notes accumulate stray frontmatter properties over time: leftovers from
 templates, one-off experiments, plugin residues or fields you no longer use. Frontmatter
@@ -30,3 +32,8 @@ Selection and deletion work the same way on desktop and mobile; rows use a
 - If a note has no frontmatter, the modal tells you instead of showing an
   empty list.
 - This is a vibe coded plugin but I use it personally and will need it for a while so will keep maintaining it.
+
+
+## License
+
+[MIT](LICENSE)
