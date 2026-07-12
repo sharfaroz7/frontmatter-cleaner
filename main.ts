@@ -12,7 +12,7 @@ export default class FrontmatterCleanerPlugin extends Plugin {
 		});
 
 		this.addCommand({
-			id: "open-frontmatter-cleaner",
+			id: "clean-frontmatter-properties",
 			name: "Clean frontmatter properties of current file",
 			callback: () => {
 				this.openCleaner();
@@ -97,7 +97,9 @@ class FrontmatterCleanerModal extends Modal {
 			cls: "fmc-delete mod-warning",
 		});
 		this.deleteButton.disabled = true;
-		this.deleteButton.addEventListener("click", () => this.deleteSelected());
+		this.deleteButton.addEventListener("click", () => {
+	void this.deleteSelected();
+});
 	}
 
 	private handleToggle(key: string, checked: boolean, row: HTMLElement) {
@@ -134,11 +136,11 @@ class FrontmatterCleanerModal extends Modal {
 
 		const keysToDelete = Array.from(this.selected);
 
-		await this.app.fileManager.processFrontMatter(this.file, (fm) => {
-			for (const key of keysToDelete) {
-				delete fm[key];
-			}
-		});
+		await this.app.fileManager.processFrontMatter(this.file, (fm: Record<string, unknown>) => {
+	for (const key of keysToDelete) {
+		delete fm[key];
+	}
+});
 
 		new Notice(
 			`Deleted ${keysToDelete.length} propert${keysToDelete.length === 1 ? "y" : "ies"}.`
