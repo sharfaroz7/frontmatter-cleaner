@@ -4,8 +4,8 @@
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
 	"description": "View the current file's frontmatter properties in a tap-friendly modal and delete the ones you select.",
-	"author": "Your Name",
-	"authorUrl": "https://github.com/your-username",
+	"author": "sharfaroz",
+	"authorUrl": "https://github.com/sharfaroz7",
 	"fundingUrl": "",
 	"isDesktopOnly": false
 }
