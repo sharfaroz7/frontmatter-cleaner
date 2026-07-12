@@ -1,6 +1,6 @@
 # Frontmatter Cleaner
 
-Quickly review and remove frontmatter (YAML) properties from the note you're
+Quickly review and remove frontmatter (YAML) properties from the Obsidian note you're
 currently viewing — without opening the YAML block and editing them one by one with right clicks.
 
 ## Why
