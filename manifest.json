@@ -2,7 +2,7 @@
 	"id": "frontmatter-cleaner",
 	"name": "Frontmatter Cleaner",
 	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
+	"minAppVersion": "1.4.4",
 	"description": "View the current file's frontmatter properties in a tap-friendly modal and delete the ones you select.",
 	"author": "sharfaroz",
 	"authorUrl": "https://github.com/sharfaroz7",
