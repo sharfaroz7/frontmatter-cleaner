@@ -1,6 +1,6 @@
 {
 	"name": "frontmatter-cleaner",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Obsidian plugin: view and delete frontmatter properties of the current file from a modal.",
 	"main": "main.js",
 	"scripts": {
@@ -8,7 +8,7 @@
 		"build": "node esbuild.config.mjs production"
 	},
 	"keywords": [],
-	"author": "CNS",
+	"author": "sharfaroz",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^20.0.0",

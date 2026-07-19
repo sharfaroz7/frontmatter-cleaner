@@ -10,6 +10,59 @@
 	word-break: break-all;
 }
 
+.fmc-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 12px;
+}
+
+.fmc-chip {
+	min-height: 36px;
+	padding: 6px 14px;
+	font-size: 0.85em;
+	border-radius: 999px;
+	background: var(--background-modifier-form-field);
+	border: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.fmc-chip:hover:not(:disabled) {
+	background: var(--background-modifier-hover);
+}
+
+.fmc-chip:active:not(:disabled) {
+	background: var(--background-modifier-active-hover);
+}
+
+.fmc-chip:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.fmc-key-line {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.fmc-badge {
+	font-size: 0.68em;
+	font-weight: 700;
+	padding: 1px 7px;
+	border-radius: 999px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	line-height: 1.6;
+}
+
+.fmc-badge-empty {
+	background: var(--background-modifier-border);
+	color: var(--text-muted);
+}
+
 .fmc-list {
 	display: flex;
 	flex-direction: column;
@@ -101,6 +154,15 @@
 @media (max-width: 480px) {
 	.fmc-row {
 		padding: 12px;
+	}
+
+	.fmc-toolbar {
+		gap: 8px;
+	}
+
+	.fmc-chip {
+		flex: 1;
+		min-width: calc(50% - 4px);
 	}
 
 	.fmc-footer button {
